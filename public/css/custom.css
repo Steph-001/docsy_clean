@@ -11,12 +11,20 @@ body {
 /* Scroll margin for headings to ensure they're visible below the fixed header */
 h1, h2, h3, h4, h5, h6, 
 [id] {
-  scroll-margin-top: 76px; /* Header height (56px) + extra padding (20px) */
+  scroll-margin-top: 100px; /* Increased value for better spacing */
+  padding-top: 10px; /* Add padding to ensure content is not too close to the top */
 }
 
 /* Fixed header and mobile navigation */
 .fixed-top {
   z-index: 1030;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add shadow for better visibility */
+  will-change: transform; /* Optimize for animations */
+  transition: transform 0.3s ease; /* Smooth transition for scroll effects */
 }
 
 .mobile-menu {
@@ -50,7 +58,9 @@ h1, h2, h3, h4, h5, h6,
 
 /* Main container adjustments for fixed header */
 .main-container {
-  padding-top: 1rem;
+  padding-top: 1.5rem; /* Increased padding */
+  position: relative;
+  z-index: 1; /* Ensure content is below header */
 }
 
 /* Left sidebar (general TOC) */
@@ -214,6 +224,13 @@ h1, h2, h3, h4, h5, h6,
     top: 56px;
     z-index: 1020;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Ensure header stays visible on small screens */
+  .fixed-top {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
   }
 }
 

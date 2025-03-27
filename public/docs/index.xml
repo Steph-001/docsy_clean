@@ -6,8 +6,15 @@
     <description>Recent content in Materials on Teaching Materials Website</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dot Painting Video</title>
+      <link>http://localhost:1313/docs/dot-painting-video/</link>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/dot-painting-video/</guid>
+      <description>&lt;h1 id=&#34;dot-painting-video&#34;&gt;Dot Painting Video&lt;/h1&gt;&#xA;&lt;p&gt;This page demonstrates embedding a local MP4 video file using a custom shortcode. The video shows dot painting techniques.&lt;/p&gt;&#xA;&lt;h2 id=&#34;video-demonstration&#34;&gt;Video Demonstration&lt;/h2&gt;&#xA;&lt;p&gt;Below is a video demonstration of dot painting:&lt;/p&gt;&#xA;&lt;div class=&#34;video-container&#34;&gt;&#xA;  &lt;video width=&#34;100%&#34; controls&gt;&#xA;    &lt;source src=&#34;http://localhost:1313/videos/dotpainting.mp4&#34; type=&#34;video/mp4&#34;&gt;&#xA;    Your browser does not support the video tag.&#xA;  &lt;/video&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;about-dot-painting&#34;&gt;About Dot Painting&lt;/h2&gt;&#xA;&lt;p&gt;Dot painting is a form of Aboriginal art from Australia that uses dots of paint to create patterns and tell stories. The technique involves applying small dots of paint in patterns to form an image.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Tables</title>
       <link>http://localhost:1313/docs/materials/tables/</link>
