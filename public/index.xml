@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Welcome to Your Teaching Materials Website on Teaching Materials Website</title>
-    <link>http://localhost:1313/</link>
+    <link>http://example.org/</link>
     <description>Recent content in Welcome to Your Teaching Materials Website on Teaching Materials Website</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dot Painting Video</title>
-      <link>http://localhost:1313/docs/dot-painting-video/</link>
+      <link>http://example.org/docs/dot-painting-video/</link>
       <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/dot-painting-video/</guid>
-      <description>&lt;h1 id=&#34;dot-painting-video&#34;&gt;Dot Painting Video&lt;/h1&gt;&#xA;&lt;p&gt;This page demonstrates embedding a local MP4 video file using a custom shortcode. The video shows dot painting techniques.&lt;/p&gt;&#xA;&lt;h2 id=&#34;video-demonstration&#34;&gt;Video Demonstration&lt;/h2&gt;&#xA;&lt;p&gt;Below is a video demonstration of dot painting:&lt;/p&gt;&#xA;&lt;div class=&#34;video-container&#34;&gt;&#xA;  &lt;video width=&#34;100%&#34; controls&gt;&#xA;    &lt;source src=&#34;http://localhost:1313/videos/dotpainting.mp4&#34; type=&#34;video/mp4&#34;&gt;&#xA;    Your browser does not support the video tag.&#xA;  &lt;/video&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;about-dot-painting&#34;&gt;About Dot Painting&lt;/h2&gt;&#xA;&lt;p&gt;Dot painting is a form of Aboriginal art from Australia that uses dots of paint to create patterns and tell stories. The technique involves applying small dots of paint in patterns to form an image.&lt;/p&gt;</description>
+      <guid>http://example.org/docs/dot-painting-video/</guid>
+      <description>&lt;h1 id=&#34;dot-painting-video&#34;&gt;Dot Painting Video&lt;/h1&gt;&#xA;&lt;p&gt;This page demonstrates embedding a local MP4 video file using a custom shortcode. The video shows dot painting techniques.&lt;/p&gt;&#xA;&lt;h2 id=&#34;video-demonstration&#34;&gt;Video Demonstration&lt;/h2&gt;&#xA;&lt;p&gt;Below is a video demonstration of dot painting:&lt;/p&gt;&#xA;&lt;div class=&#34;video-container&#34;&gt;&#xA;  &lt;video width=&#34;100%&#34; controls&gt;&#xA;    &lt;source src=&#34;http://example.org/videos/dotpainting.mp4&#34; type=&#34;video/mp4&#34;&gt;&#xA;    Your browser does not support the video tag.&#xA;  &lt;/video&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;about-dot-painting&#34;&gt;About Dot Painting&lt;/h2&gt;&#xA;&lt;p&gt;Dot painting is a form of Aboriginal art from Australia that uses dots of paint to create patterns and tell stories. The technique involves applying small dots of paint in patterns to form an image.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tables</title>
-      <link>http://localhost:1313/docs/materials/tables/</link>
+      <link>http://example.org/docs/materials/tables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/materials/tables/</guid>
+      <guid>http://example.org/docs/materials/tables/</guid>
       <description>&lt;h1 id=&#34;tables-in-teaching-materials&#34;&gt;Tables in Teaching Materials&lt;/h1&gt;&#xA;&lt;p&gt;Tables are an excellent way to organize and present structured information. This page demonstrates how to create and format tables for your teaching materials.&lt;/p&gt;&#xA;&lt;h2 id=&#34;basic-table-structure&#34;&gt;Basic Table Structure&lt;/h2&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a simple table showing the days of the week in different languages:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;English&lt;/th&gt;&#xA;          &lt;th&gt;French&lt;/th&gt;&#xA;          &lt;th&gt;Spanish&lt;/th&gt;&#xA;          &lt;th&gt;German&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Monday&lt;/td&gt;&#xA;          &lt;td&gt;Lundi&lt;/td&gt;&#xA;          &lt;td&gt;Lunes&lt;/td&gt;&#xA;          &lt;td&gt;Montag&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Tuesday&lt;/td&gt;&#xA;          &lt;td&gt;Mardi&lt;/td&gt;&#xA;          &lt;td&gt;Martes&lt;/td&gt;&#xA;          &lt;td&gt;Dienstag&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Wednesday&lt;/td&gt;&#xA;          &lt;td&gt;Mercredi&lt;/td&gt;&#xA;          &lt;td&gt;Miércoles&lt;/td&gt;&#xA;          &lt;td&gt;Mittwoch&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Thursday&lt;/td&gt;&#xA;          &lt;td&gt;Jeudi&lt;/td&gt;&#xA;          &lt;td&gt;Jueves&lt;/td&gt;&#xA;          &lt;td&gt;Donnerstag&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Friday&lt;/td&gt;&#xA;          &lt;td&gt;Vendredi&lt;/td&gt;&#xA;          &lt;td&gt;Viernes&lt;/td&gt;&#xA;          &lt;td&gt;Freitag&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Saturday&lt;/td&gt;&#xA;          &lt;td&gt;Samedi&lt;/td&gt;&#xA;          &lt;td&gt;Sábado&lt;/td&gt;&#xA;          &lt;td&gt;Samstag&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Sunday&lt;/td&gt;&#xA;          &lt;td&gt;Dimanche&lt;/td&gt;&#xA;          &lt;td&gt;Domingo&lt;/td&gt;&#xA;          &lt;td&gt;Sonntag&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;comparison-table&#34;&gt;Comparison Table&lt;/h2&gt;&#xA;&lt;p&gt;Tables are useful for comparing different items or concepts:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Grammar Fundamentals</title>
-      <link>http://localhost:1313/blog/unit2/</link>
+      <link>http://example.org/blog/unit2/</link>
       <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unit2/</guid>
+      <guid>http://example.org/blog/unit2/</guid>
       <description>&lt;h1 id=&#34;grammar-fundamentals&#34;&gt;Grammar Fundamentals&lt;/h1&gt;&#xA;&lt;p&gt;This teaching unit covers the essential grammar concepts that form the foundation of language structure. Understanding these fundamentals is crucial for both language analysis and effective communication.&lt;/p&gt;&#xA;&lt;h2 id=&#34;parts-of-speech&#34;&gt;Parts of Speech&lt;/h2&gt;&#xA;&lt;p&gt;The parts of speech are the categories into which words are classified according to their functions in sentences.&lt;/p&gt;&#xA;&lt;h3 id=&#34;nouns&#34;&gt;Nouns&lt;/h3&gt;&#xA;&lt;p&gt;Nouns are words that name people, places, things, or ideas.&lt;/p&gt;&#xA;&lt;p&gt;Types of nouns include:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Common nouns&lt;/strong&gt;: General names (teacher, city, book)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Proper nouns&lt;/strong&gt;: Specific names (John, Paris, The Great Gatsby)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Concrete nouns&lt;/strong&gt;: Physical entities (chair, water, dog)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Abstract nouns&lt;/strong&gt;: Concepts or ideas (love, freedom, courage)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Collective nouns&lt;/strong&gt;: Groups (team, family, flock)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;pronouns&#34;&gt;Pronouns&lt;/h3&gt;&#xA;&lt;p&gt;Pronouns replace nouns to avoid repetition.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Introduction to Language</title>
-      <link>http://localhost:1313/blog/unit1/</link>
+      <link>http://example.org/blog/unit1/</link>
       <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/unit1/</guid>
+      <guid>http://example.org/blog/unit1/</guid>
       <description>&lt;h1 id=&#34;introduction-to-language&#34;&gt;Introduction to Language&lt;/h1&gt;&#xA;&lt;p&gt;This teaching unit provides a comprehensive introduction to language concepts and fundamentals. Students will learn about the basic building blocks of language and how they work together to create meaning.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-language&#34;&gt;What is Language?&lt;/h2&gt;&#xA;&lt;p&gt;Language is a structured system of communication that consists of grammar, syntax, and semantics. It can be spoken, written, or signed, and it allows humans to express thoughts, feelings, and ideas.&lt;/p&gt;&#xA;&lt;p&gt;Language is one of the most important tools humans have developed. It allows us to:&lt;/p&gt;</description>
     </item>
   </channel>
