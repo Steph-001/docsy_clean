@@ -21,9 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
           
           // Wait for the collapse animation to finish before scrolling
           setTimeout(function() {
-            // Calculate position accounting for fixed header
+            // Calculate position accounting for fixed header with additional padding
             const headerHeight = document.querySelector('header').offsetHeight;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            // Add 20px additional padding to ensure header is fully visible
+            const additionalPadding = 20;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - additionalPadding;
             
             // Smooth scroll to the target section
             window.scrollTo({
