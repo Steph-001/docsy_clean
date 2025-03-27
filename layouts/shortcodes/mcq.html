@@ -1,0 +1,12 @@
+<div class="quiz-question">
+  <h4>{{ .Get "question" }}</h4>
+  <div class="quiz-options">
+    {{ $options := split (.Get "options") "," }}
+    {{ range $index, $option := $options }}
+    <label>
+      <input type="radio" name="{{ $.Get "name" }}" value="{{ $index }}">
+      {{ $option }}
+    </label>
+    {{ end }}
+  </div>
+</div>

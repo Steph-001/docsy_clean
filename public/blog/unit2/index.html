@@ -5,13 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Grammar Fundamentals | Teaching Materials Website</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link href="/css/custom.css" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="fixed-top">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <a class="navbar-brand" href="/">Teaching Materials Website</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      
+      
+      <div class="d-flex d-md-none ml-auto">
+        
+        <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#materialsSidebar" aria-controls="materialsSidebar" aria-expanded="false" aria-label="Toggle materials">
+          <i class="fas fa-book"></i>
+        </button>
+        
+        
+        <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#unitsSidebar" aria-controls="unitsSidebar" aria-expanded="false" aria-label="Toggle units">
+          <i class="fas fa-graduation-cap"></i>
+        </button>
+        
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pageTOC" aria-controls="pageTOC" aria-expanded="false" aria-label="Toggle page TOC">
+          <i class="fas fa-list"></i>
+        </button>
+      </div>
+      
+      
+      <div class="d-none d-md-block d-xl-none ml-auto">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pageTOC" aria-controls="pageTOC" aria-expanded="false" aria-label="Toggle page TOC">
+          <i class="fas fa-list"></i> Page Contents
+        </button>
+      </div>
+      
+      
+      <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -29,11 +57,81 @@
         </ul>
       </div>
     </nav>
+    
+    
+    <div class="collapse navbar-collapse bg-light mobile-menu" id="materialsSidebar">
+      <div class="p-3">
+        <h5>Materials</h5>
+        <ul class="list-unstyled">
+          
+          <li><a href="/docs/materials/tables/" class="">Tables</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    <div class="collapse navbar-collapse bg-light mobile-menu" id="unitsSidebar">
+      <div class="p-3">
+        <h5>Teaching Units</h5>
+        <ul class="list-unstyled">
+          
+          <li><a href="/blog/unit2/" class="active">Grammar Fundamentals</a></li>
+          
+          <li><a href="/blog/unit1/" class="">Introduction to Language</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    <div class="collapse navbar-collapse bg-light mobile-menu" id="pageTOC">
+      <div class="p-3">
+        <h5>On This Page</h5>
+        
+          
+            
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#parts-of-speech">Parts of Speech</a>
+      <ul>
+        <li><a href="#nouns">Nouns</a></li>
+        <li><a href="#pronouns">Pronouns</a></li>
+        <li><a href="#verbs">Verbs</a></li>
+        <li><a href="#adjectives">Adjectives</a></li>
+        <li><a href="#adverbs">Adverbs</a></li>
+        <li><a href="#prepositions">Prepositions</a></li>
+        <li><a href="#conjunctions">Conjunctions</a></li>
+        <li><a href="#interjections">Interjections</a></li>
+      </ul>
+    </li>
+    <li><a href="#sentence-structure">Sentence Structure</a>
+      <ul>
+        <li><a href="#subjects-and-predicates">Subjects and Predicates</a></li>
+        <li><a href="#phrases">Phrases</a></li>
+        <li><a href="#clauses">Clauses</a></li>
+        <li><a href="#sentence-types">Sentence Types</a></li>
+      </ul>
+    </li>
+    <li><a href="#tense-aspect-and-mood">Tense, Aspect, and Mood</a>
+      <ul>
+        <li><a href="#tense">Tense</a></li>
+        <li><a href="#aspect">Aspect</a></li>
+        <li><a href="#mood">Mood</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+            
+          
+        
+      </div>
+    </div>
   </header>
-  <div class="container-fluid">
+  
+  <div class="container-fluid main-container">
     <div class="row">
       
-      <div class="col-12 col-md-3 col-xl-2 td-sidebar">
+      <div class="col-12 col-md-3 col-xl-2 td-sidebar d-none d-md-block">
         <nav class="td-sidebar-nav" id="td-section-nav">
           <div class="td-sidebar-nav__section">
             <span class="text-uppercase mt-5 td-sidebar-link__section-title">Teaching Units</span>
@@ -52,15 +150,13 @@
               
               <li><a href="/docs/materials/tables/" class="">Tables</a></li>
               
-              <li><a href="/docs/materials/images/" class="">Images</a></li>
-              
             </ul>
           </div>
         </nav>
       </div>
       
       
-      <main class="col-12 col-md-7 col-xl-8 pl-md-5 td-main">
+      <main class="col-12 col-md-9 col-xl-8 pl-md-5 td-main">
         
 <div class="td-content">
   <h1>Grammar Fundamentals</h1>

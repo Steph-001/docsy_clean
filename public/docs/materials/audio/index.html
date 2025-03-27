@@ -1,67 +1,71 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
-<head>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <title>Audio Example | Teaching Materials Website</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <link href="{{ "css/custom.css" | relURL }}" rel="stylesheet">
+  <link href="/css/custom.css" rel="stylesheet">
 </head>
 <body>
   <header class="fixed-top">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
+      <a class="navbar-brand" href="/">Teaching Materials Website</a>
       
-      <!-- Mobile navigation toggles -->
+      
       <div class="d-flex d-md-none ml-auto">
-        <!-- Materials Menu Toggle -->
+        
         <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#materialsSidebar" aria-controls="materialsSidebar" aria-expanded="false" aria-label="Toggle materials">
           <i class="fas fa-book"></i>
         </button>
         
-        <!-- Teaching Units Menu Toggle -->
+        
         <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#unitsSidebar" aria-controls="unitsSidebar" aria-expanded="false" aria-label="Toggle units">
           <i class="fas fa-graduation-cap"></i>
         </button>
         
-        <!-- Page TOC Toggle -->
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pageTOC" aria-controls="pageTOC" aria-expanded="false" aria-label="Toggle page TOC">
           <i class="fas fa-list"></i>
         </button>
       </div>
       
-      <!-- Medium screen TOC toggle -->
+      
       <div class="d-none d-md-block d-xl-none ml-auto">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pageTOC" aria-controls="pageTOC" aria-expanded="false" aria-label="Toggle page TOC">
           <i class="fas fa-list"></i> Page Contents
         </button>
       </div>
       
-      <!-- Main navigation -->
+      
       <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          {{ $currentPage := . }}
-          {{ range .Site.Menus.main }}
-          <li class="nav-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">
-            <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/blog/">Teaching Units</a>
           </li>
-          {{ end }}
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/docs/">Materials</a>
+          </li>
+          
         </ul>
       </div>
     </nav>
     
-    <!-- Mobile collapsible menus -->
+    
     <div class="collapse navbar-collapse bg-light mobile-menu" id="materialsSidebar">
       <div class="p-3">
         <h5>Materials</h5>
         <ul class="list-unstyled">
-          {{ range where .Site.RegularPages "Section" "docs" }}
-          <li><a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}active{{ end }}">{{ .Title }}</a></li>
-          {{ end }}
+          
+          <li><a href="/docs/materials/tables/" class="">Tables</a></li>
+          
         </ul>
       </div>
     </div>
@@ -70,9 +74,11 @@
       <div class="p-3">
         <h5>Teaching Units</h5>
         <ul class="list-unstyled">
-          {{ range where .Site.RegularPages "Section" "blog" }}
-          <li><a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}active{{ end }}">{{ .Title }}</a></li>
-          {{ end }}
+          
+          <li><a href="/blog/unit2/" class="">Grammar Fundamentals</a></li>
+          
+          <li><a href="/blog/unit1/" class="">Introduction to Language</a></li>
+          
         </ul>
       </div>
     </div>
@@ -80,61 +86,107 @@
     <div class="collapse navbar-collapse bg-light mobile-menu" id="pageTOC">
       <div class="p-3">
         <h5>On This Page</h5>
-        {{ if not .Params.notoc }}
-          {{ with .TableOfContents }}
-            {{ if ge (len .) 200 }}
-              {{ . }}
-            {{ else }}
-              <p class="text-muted">No table of contents available</p>
-            {{ end }}
-          {{ end }}
-        {{ end }}
+        
+          
+            
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#example-audio">Example Audio</a></li>
+    <li><a href="#how-to-use-the-audio-shortcode">How to Use the Audio Shortcode</a></li>
+    <li><a href="#benefits-of-using-audio-in-language-teaching">Benefits of Using Audio in Language Teaching</a></li>
+  </ul>
+</nav>
+            
+          
+        
       </div>
     </div>
   </header>
   
   <div class="container-fluid main-container">
     <div class="row">
-      <!-- Left sidebar with TOC of all units -->
+      
       <div class="col-12 col-md-3 col-xl-2 td-sidebar d-none d-md-block">
         <nav class="td-sidebar-nav" id="td-section-nav">
           <div class="td-sidebar-nav__section">
             <span class="text-uppercase mt-5 td-sidebar-link__section-title">Teaching Units</span>
             <ul>
-              {{ range where .Site.RegularPages "Section" "blog" }}
-              <li><a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}active{{ end }}">{{ .Title }}</a></li>
-              {{ end }}
+              
+              <li><a href="/blog/unit2/" class="">Grammar Fundamentals</a></li>
+              
+              <li><a href="/blog/unit1/" class="">Introduction to Language</a></li>
+              
             </ul>
           </div>
           
           <div class="td-sidebar-nav__section">
             <span class="text-uppercase mt-5 td-sidebar-link__section-title">Materials</span>
             <ul>
-              {{ range where .Site.RegularPages "Section" "docs" }}
-              <li><a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}active{{ end }}">{{ .Title }}</a></li>
-              {{ end }}
+              
+              <li><a href="/docs/materials/tables/" class="">Tables</a></li>
+              
             </ul>
           </div>
         </nav>
       </div>
       
-      <!-- Main content -->
+      
       <main class="col-12 col-md-9 col-xl-8 pl-md-5 td-main">
-        {{ block "main" . }}{{ end }}
+        
+<div class="td-content">
+  <h1>Audio Example</h1>
+  <div class="lead">Example page demonstrating audio embedding</div>
+  <h1 id="audio-embedding">Audio Embedding</h1>
+<p>This page demonstrates how to embed audio files in your teaching materials. Audio files are essential for language teaching, allowing students to hear correct pronunciation and practice listening skills.</p>
+<h2 id="example-audio">Example Audio</h2>
+<p>Below is an example of an embedded audio player:</p>
+<div class="audio-container">
+  <audio controls>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+<h2 id="how-to-use-the-audio-shortcode">How to Use the Audio Shortcode</h2>
+<p>To embed an audio file in your content, use the following shortcode:</p>
+<pre tabindex="0"><code>{{&lt; audio src=&#34;path/to/your/audio.mp3&#34; type=&#34;audio/mpeg&#34; &gt;}}
+</code></pre><p>Replace the path with the URL or local path to your audio file. The <code>type</code> parameter is optional but recommended for better browser compatibility.</p>
+<h2 id="benefits-of-using-audio-in-language-teaching">Benefits of Using Audio in Language Teaching</h2>
+<p>Audio resources are particularly valuable in language teaching:</p>
+<ol>
+<li>Demonstrates correct pronunciation and intonation</li>
+<li>Develops listening comprehension skills</li>
+<li>Exposes students to different accents and speaking styles</li>
+<li>Provides authentic language examples</li>
+<li>Supports auditory learners</li>
+</ol>
+<p>Consider including audio recordings of vocabulary words, dialogues, and listening comprehension exercises. You can also create audio versions of reading passages to help students connect written and spoken forms of the language.</p>
+
+  <div class="section-index">
+    
+  </div>
+</div>
+
       </main>
       
-      <!-- Right sidebar (TOC) - fixed when scrolling -->
+      
       <div class="d-none d-xl-block col-xl-2 td-toc">
-        {{ if not .Params.notoc }}
-          {{ with .TableOfContents }}
-            {{ if ge (len .) 200 }}
+        
+          
+            
             <div class="td-toc-wrapper">
               <h4>On This Page</h4>
-              {{ . }}
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#example-audio">Example Audio</a></li>
+    <li><a href="#how-to-use-the-audio-shortcode">How to Use the Audio Shortcode</a></li>
+    <li><a href="#benefits-of-using-audio-in-language-teaching">Benefits of Using Audio in Language Teaching</a></li>
+  </ul>
+</nav>
             </div>
-            {{ end }}
-          {{ end }}
-        {{ end }}
+            
+          
+        
       </div>
     </div>
   </div>
@@ -143,13 +195,13 @@
     <div class="container-fluid mx-sm-5">
       <div class="row">
         <div class="col-12 text-center py-2">
-          <small class="text-white">&copy; {{ now.Year}} Teaching Materials Website </small>
+          <small class="text-white">&copy; 2025 Teaching Materials Website </small>
         </div>
       </div>
     </div>
   </footer>
   
-  <!-- Scripts -->
+  
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

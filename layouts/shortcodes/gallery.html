@@ -1,0 +1,6 @@
+<div class="image-gallery">
+  {{ $images := split (.Get "images") "," }}
+  {{ range $images }}
+    <img src="{{ . }}" alt="Gallery image">
+  {{ end }}
+</div>

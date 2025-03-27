@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Materials | Teaching Materials Website</title>
+  <title>Quiz Example | Teaching Materials Website</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link href="/css/custom.css" rel="stylesheet">
@@ -89,7 +89,13 @@
         
           
             
-              <p class="text-muted">No table of contents available</p>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#example-quiz">Example Quiz</a></li>
+    <li><a href="#how-to-use-the-quiz-shortcodes">How to Use the Quiz Shortcodes</a></li>
+    <li><a href="#benefits-of-interactive-quizzes">Benefits of Interactive Quizzes</a></li>
+  </ul>
+</nav>
             
           
         
@@ -128,42 +134,120 @@
       <main class="col-12 col-md-9 col-xl-8 pl-md-5 td-main">
         
 <div class="td-content">
-  <h1>Materials</h1>
-  
-  <h1 id="teaching-materials">Teaching Materials</h1>
-<p>This section contains various types of teaching resources organized by media type. Here you&rsquo;ll find examples of how to present different types of content including tables, images, audio, video, and PDF documents.</p>
+  <h1>Quiz Example</h1>
+  <div class="lead">Example page demonstrating interactive quizzes</div>
+  <h1 id="interactive-quizzes">Interactive Quizzes</h1>
+<p>This page demonstrates how to create interactive quizzes in your teaching materials. Quizzes are excellent tools for formative assessment and helping students check their understanding.</p>
+<h2 id="example-quiz">Example Quiz</h2>
+<p>Below is an example quiz with different question types:</p>
+<div class="quiz-container">
+  <form class="quiz-form" id="language-quiz">
+    
+
+<div class="quiz-question">
+  <h4>Which of the following is NOT a Romance language?</h4>
+  <div class="quiz-options">
+    
+    
+    <label>
+      <input type="radio" name="q1" value="0">
+      French
+    </label>
+    
+    <label>
+      <input type="radio" name="q1" value="1">
+      Italian
+    </label>
+    
+    <label>
+      <input type="radio" name="q1" value="2">
+      German
+    </label>
+    
+    <label>
+      <input type="radio" name="q1" value="3">
+      Spanish
+    </label>
+    
+  </div>
+</div>
+
+
+<div class="quiz-question">
+  <h4>What is the past tense of &#39;to go&#39; in English?</h4>
+  <div class="quiz-options">
+    
+    
+    <label>
+      <input type="radio" name="q2" value="0">
+      Goed
+    </label>
+    
+    <label>
+      <input type="radio" name="q2" value="1">
+      Went
+    </label>
+    
+    <label>
+      <input type="radio" name="q2" value="2">
+      Gone
+    </label>
+    
+    <label>
+      <input type="radio" name="q2" value="3">
+      Going
+    </label>
+    
+  </div>
+</div>
+
+
+<div class="quiz-question">
+  <h4>What is the capital city of France?</h4>
+  <input type="text" class="quiz-text-input" name="q3" placeholder="Type your answer here">
+</div>
+
+
+<div class="quiz-question">
+  <h4>Translate &#39;Hello, how are you?&#39; to French</h4>
+  <input type="text" class="quiz-text-input" name="q4" placeholder="Type your translation here">
+</div>
+
+
+
+    <button type="submit" class="quiz-submit">Submit</button>
+  </form>
+</div>
+
+<script>
+document.getElementById('language-quiz').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Quiz submitted! In a real implementation, this would process and score the answers.');
+});
+</script>
+
+<h2 id="how-to-use-the-quiz-shortcodes">How to Use the Quiz Shortcodes</h2>
+<p>To create a quiz in your content, use the following shortcodes:</p>
+<pre tabindex="0"><code>{{&lt; quiz id=&#34;unique-quiz-id&#34; &gt;}}
+
+{{&lt; mcq question=&#34;Your multiple choice question&#34; name=&#34;q1&#34; options=&#34;Option 1,Option 2,Option 3,Option 4&#34; &gt;}}
+
+{{&lt; text-question question=&#34;Your text question&#34; name=&#34;q2&#34; placeholder=&#34;Custom placeholder text&#34; &gt;}}
+
+{{&lt; /quiz &gt;}}
+</code></pre><p>You can include as many questions as needed within the quiz container.</p>
+<h2 id="benefits-of-interactive-quizzes">Benefits of Interactive Quizzes</h2>
+<p>Interactive quizzes offer several benefits for language teaching:</p>
+<ol>
+<li>Immediate feedback for students</li>
+<li>Engagement through active participation</li>
+<li>Self-assessment opportunities</li>
+<li>Reinforcement of key concepts</li>
+<li>Variety in learning activities</li>
+</ol>
+<p>Consider using quizzes at the end of each teaching unit to help students review and consolidate their learning. You can create quizzes with different difficulty levels to accommodate diverse learning needs.</p>
 
   <div class="section-index">
-    
-    <div class="entry">
-      <h5><a href="/docs/materials/tables/">Tables</a></h5>
-      <p>Examples of using tables in teaching materials</p>
-    </div>
-    
-    <div class="entry">
-      <h5><a href="/docs/materials/audio/">Audio Example</a></h5>
-      <p>Example page demonstrating audio embedding</p>
-    </div>
-    
-    <div class="entry">
-      <h5><a href="/docs/materials/images/">Image Gallery Example</a></h5>
-      <p>Example page demonstrating image galleries</p>
-    </div>
-    
-    <div class="entry">
-      <h5><a href="/docs/materials/pdf/">PDF Example</a></h5>
-      <p>Example page demonstrating PDF embedding</p>
-    </div>
-    
-    <div class="entry">
-      <h5><a href="/docs/materials/quiz/">Quiz Example</a></h5>
-      <p>Example page demonstrating interactive quizzes</p>
-    </div>
-    
-    <div class="entry">
-      <h5><a href="/docs/materials/video/">Video Example</a></h5>
-      <p>Example page demonstrating video embedding</p>
-    </div>
     
   </div>
 </div>
@@ -174,6 +258,17 @@
       <div class="d-none d-xl-block col-xl-2 td-toc">
         
           
+            
+            <div class="td-toc-wrapper">
+              <h4>On This Page</h4>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#example-quiz">Example Quiz</a></li>
+    <li><a href="#how-to-use-the-quiz-shortcodes">How to Use the Quiz Shortcodes</a></li>
+    <li><a href="#benefits-of-interactive-quizzes">Benefits of Interactive Quizzes</a></li>
+  </ul>
+</nav>
+            </div>
             
           
         

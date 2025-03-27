@@ -1,0 +1,4 @@
+<div class="quiz-question">
+  <h4>{{ .Get "question" }}</h4>
+  <input type="text" class="quiz-text-input" name="{{ .Get "name" }}" placeholder="{{ .Get "placeholder" | default "Enter your answer" }}">
+</div>
