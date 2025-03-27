@@ -21,18 +21,38 @@ document.addEventListener('DOMContentLoaded', function() {
           
           // Wait for the collapse animation to finish before scrolling
           setTimeout(function() {
-            // Calculate position accounting for fixed header with additional padding
+            // Get the header height for offset
             const headerHeight = document.querySelector('header').offsetHeight;
-            // Add 20px additional padding to ensure header is fully visible
+            // Add additional padding to ensure header is fully visible
             const additionalPadding = 20;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - additionalPadding;
+            const totalOffset = headerHeight + additionalPadding;
             
-            // Smooth scroll to the target section
+            // Get the absolute position of the element on the page
+            const rect = targetElement.getBoundingClientRect();
+            const absoluteTop = rect.top + window.pageYOffset;
+            
+            // Scroll to the element with the offset
             window.scrollTo({
-              top: targetPosition,
+              top: absoluteTop - totalOffset,
               behavior: 'smooth'
             });
-          }, 350); // Adjust timing based on collapse animation duration
+            
+            // Add a second scroll check to ensure proper positioning
+            // This helps with lower sections of the page
+            setTimeout(function() {
+              // Get the new position after initial scroll
+              const newRect = targetElement.getBoundingClientRect();
+              
+              // If the element is not properly positioned (header might be covering it)
+              if (newRect.top < totalOffset) {
+                // Adjust the scroll position
+                window.scrollBy({
+                  top: newRect.top - totalOffset,
+                  behavior: 'smooth'
+                });
+              }
+            }, 500); // Wait for the initial scroll to complete
+          }, 350); // Wait for the collapse animation to finish
         }
       });
     });
