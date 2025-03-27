@@ -8,6 +8,12 @@ body {
   padding-top: 56px; /* Add padding for fixed header */
 }
 
+/* Scroll margin for headings to ensure they're visible below the fixed header */
+h1, h2, h3, h4, h5, h6, 
+[id] {
+  scroll-margin-top: 76px; /* Header height (56px) + extra padding (20px) */
+}
+
 /* Fixed header and mobile navigation */
 .fixed-top {
   z-index: 1030;
