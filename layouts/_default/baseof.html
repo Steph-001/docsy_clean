@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="{{ "css/custom.css" | relURL }}" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+          <li class="nav-item{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">
+            <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Left sidebar with TOC of all units -->
+      <div class="col-12 col-md-3 col-xl-2 td-sidebar">
+        <nav class="td-sidebar-nav" id="td-section-nav">
+          <div class="td-sidebar-nav__section">
+            <span class="text-uppercase mt-5 td-sidebar-link__section-title">Teaching Units</span>
+            <ul>
+              {{ range where .Site.RegularPages "Section" "blog" }}
+              <li><a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}active{{ end }}">{{ .Title }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+          
+          <div class="td-sidebar-nav__section">
+            <span class="text-uppercase mt-5 td-sidebar-link__section-title">Materials</span>
+            <ul>
+              {{ range where .Site.RegularPages "Section" "docs" }}
+              <li><a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}active{{ end }}">{{ .Title }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        </nav>
+      </div>
+      
+      <!-- Main content -->
+      <main class="col-12 col-md-7 col-xl-8 pl-md-5 td-main">
+        {{ block "main" . }}{{ end }}
+      </main>
+      
+      <!-- Right sidebar (TOC) - fixed when scrolling -->
+      <div class="d-none d-xl-block col-xl-2 td-toc">
+        {{ if not .Params.notoc }}
+          {{ with .TableOfContents }}
+            {{ if ge (len .) 200 }}
+            <div class="td-toc-wrapper">
+              <h4>On This Page</h4>
+              {{ . }}
+            </div>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  
+  <footer class="bg-dark py-5 row d-print-none">
+    <div class="container-fluid mx-sm-5">
+      <div class="row">
+        <div class="col-12 text-center py-2">
+          <small class="text-white">&copy; {{ now.Year}} Teaching Materials Website </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

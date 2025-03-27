@@ -1,0 +1,18 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Teaching Materials Website'
+
+# Navigation
+[menu]
+  [[menu.main]]
+    name = "Teaching Units"
+    url = "/blog/"
+    weight = 10
+  [[menu.main]]
+    name = "Materials"
+    url = "/docs/"
+    weight = 20
+
+# Enable raw HTML
+[markup.goldmark.renderer]
+  unsafe = true

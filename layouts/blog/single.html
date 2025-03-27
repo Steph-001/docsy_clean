@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="td-content">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+  <div class="blog-post">
+    {{ if .Params.date }}
+    <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+    {{ end }}
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}
