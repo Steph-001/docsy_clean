@@ -352,3 +352,22 @@ h1, h2, h3, h4, h5, h6,
 .quiz-submit:hover {
   background-color: #0056b3;
 }
+/* Fixed TOC positioning */
+.td-toc {
+  position: sticky !important;
+  top: 70px !important;
+  height: calc(100vh - 70px) !important;
+  overflow-y: auto !important;
+}
+
+/* Ensure main content area has proper spacing */
+.td-main {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* Ensure sidebar has proper spacing */
+.td-sidebar {
+  padding-top: 70px;
+}
+

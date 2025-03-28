@@ -1,0 +1,44 @@
+baseURL: 'http://example.org/'
+languageCode: 'en-us'
+title: 'Teaching Materials Website'
+
+# Language settings
+languages:
+  en:
+    languageName: English
+    weight: 1
+    contentDir: content
+
+# Navigation
+menu:
+  main:
+    - name: "Teaching Units"
+      url: "/blog/"
+      weight: 10
+    - name: "Materials"
+      url: "/docs/"
+      weight: 20
+
+# Enable raw HTML
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Parameters
+params:
+  copyright: "Teaching Materials Website"
+  offlineSearch: true
+  offlineSearchSummaryLength: 200
+  offlineSearchMaxResults: 25
+  ui:
+    sidebar_menu_compact: true
+    sidebar_menu_foldable: true
+    sidebar_cache_limit: 10
+      # Add this to your existing hugo.yaml
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+

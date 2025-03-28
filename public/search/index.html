@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Audio Example | Teaching Materials Website</title>
+  <title>Search Results | Teaching Materials Website</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link href="/css/custom.css" rel="stylesheet">
@@ -118,16 +118,6 @@
         <h5>On This Page</h5>
         
           
-            
-              <nav id="TableOfContents">
-  <ul>
-    <li><a href="#example-audio">Example Audio</a></li>
-    <li><a href="#how-to-use-the-audio-shortcode">How to Use the Audio Shortcode</a></li>
-    <li><a href="#benefits-of-using-audio-in-language-teaching">Benefits of Using Audio in Language Teaching</a></li>
-  </ul>
-</nav>
-            
-          
         
       </div>
     </div>
@@ -166,57 +156,65 @@
       <main class="col-12 col-md-9 col-xl-8 pl-md-5 td-main">
         
 <div class="td-content">
-  <h1>Audio Example</h1>
-  <div class="lead">Example page demonstrating audio embedding</div>
-  <h1 id="audio-embedding">Audio Embedding</h1>
-<p>This page demonstrates how to embed audio files in your teaching materials. Audio files are essential for language teaching, allowing students to hear correct pronunciation and practice listening skills.</p>
-<h2 id="example-audio">Example Audio</h2>
-<p>Below is an example of an embedded audio player:</p>
-<div class="audio-container">
-  <audio controls>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</div>
-
-<h2 id="how-to-use-the-audio-shortcode">How to Use the Audio Shortcode</h2>
-<p>To embed an audio file in your content, use the following shortcode:</p>
-<pre tabindex="0"><code>{{&lt; audio src=&#34;path/to/your/audio.mp3&#34; type=&#34;audio/mpeg&#34; &gt;}}
-</code></pre><p>Replace the path with the URL or local path to your audio file. The <code>type</code> parameter is optional but recommended for better browser compatibility.</p>
-<h2 id="benefits-of-using-audio-in-language-teaching">Benefits of Using Audio in Language Teaching</h2>
-<p>Audio resources are particularly valuable in language teaching:</p>
-<ol>
-<li>Demonstrates correct pronunciation and intonation</li>
-<li>Develops listening comprehension skills</li>
-<li>Exposes students to different accents and speaking styles</li>
-<li>Provides authentic language examples</li>
-<li>Supports auditory learners</li>
-</ol>
-<p>Consider including audio recordings of vocabulary words, dialogues, and listening comprehension exercises. You can also create audio versions of reading passages to help students connect written and spoken forms of the language.</p>
-
-  <div class="section-index">
-    
+  <h1>Search Results</h1>
+  <div id="search-results"></div>
+  <div class="text-center">
+    <p>No results found.</p>
   </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+<script>
+  
+  var searchIndex = null;
+  var searchResults = document.getElementById('search-results') ;
+  var noResults = document.querySelector('.text-center');
+  
+  
+  var urlParams = new URLSearchParams(window.location.search);
+  var query = urlParams.get('q');
+  
+  if (query) {
+    
+    fetch('/index.json')
+      .then(response => response.json())
+      .then(data => {
+        
+        searchIndex = lunr(function() {
+          this.ref('url');
+          this.field('title');
+          this.field('content');
+          
+          data.forEach(function(doc) {
+            this.add(doc);
+          }, this);
+        });
+        
+        
+        var results = searchIndex.search(query);
+        
+        if (results.length > 0) {
+          noResults.style.display = 'none';
+          
+          var resultsHtml = '<ul>';
+          results.forEach(function(result) {
+            var doc = data.find(function(d) { return d.url === result.ref; });
+            resultsHtml += '<li><a href="' + doc.url + '">' + doc.title + '</a><p>' + 
+                          (doc.content.substring(0, 200) + '...') + '</p></li>';
+          });
+          resultsHtml += '</ul>';
+          
+          searchResults.innerHTML = resultsHtml;
+        }
+      });
+  }
+</script>
 
       </main>
       
       
       <div class="d-none d-xl-block col-xl-2 td-toc">
         
-          
-            
-            <div class="td-toc-wrapper">
-              <h4>On This Page</h4>
-              <nav id="TableOfContents">
-  <ul>
-    <li><a href="#example-audio">Example Audio</a></li>
-    <li><a href="#how-to-use-the-audio-shortcode">How to Use the Audio Shortcode</a></li>
-    <li><a href="#benefits-of-using-audio-in-language-teaching">Benefits of Using Audio in Language Teaching</a></li>
-  </ul>
-</nav>
-            </div>
-            
           
         
       </div>

@@ -8,6 +8,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link href="/css/custom.css" rel="stylesheet">
   <link href="/css/highlight.css" rel="stylesheet">
+  <style>
+     
+    .td-toc {
+      position: sticky;
+      top: 70px;
+      height: calc(100vh - 70px) ;
+      overflow-y: auto;
+    }
+    .td-sidebar-nav {
+      padding-top: 70px;
+    }
+    .search-box {
+      max-width: 200px;
+    }
+    @media (max-width: 768px) {
+      .search-box {
+        margin-top: 10px;
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="fixed-top">
@@ -56,6 +77,12 @@
           </li>
           
         </ul>
+        
+        
+        <form class="form-inline my-2 my-lg-0" action="/search/" method="get">
+          <input class="form-control mr-sm-2 search-box" type="search" placeholder="Search" aria-label="Search" name="q">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
     </nav>
     
@@ -159,10 +186,6 @@
 
 <h2 id="about-dot-painting">About Dot Painting</h2>
 <p>Dot painting is a form of Aboriginal art from Australia that uses dots of paint to create patterns and tell stories. The technique involves applying small dots of paint in patterns to form an image.</p>
-<video controls width="100%" poster="/images/video_poster.jpg" preload="metadata">
-    <source src="/videos/dotpainting.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> 
-    Sorry, your browser doesn't support embedded videos.
-</video>
 <h3 id="key-features">Key Features</h3>
 <ul>
 <li>Uses dots of various colors to create patterns and images</li>
@@ -235,3 +258,4 @@
   <script src="/js/custom.js"></script>
 </body>
 </html>
+
