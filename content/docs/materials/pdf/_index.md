@@ -12,7 +12,7 @@ This page demonstrates how to embed PDF documents in your teaching materials. Em
 
 Below is an example of an embedded PDF document:
 
-{{< pdf src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" >}}
+{{< pdf src="/pdf/test.pdf" >}}
 
 ## How to Use the PDF Shortcode
 
