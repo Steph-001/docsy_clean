@@ -19,6 +19,11 @@ Below is a video demonstration of dot painting:
 
 Dot painting is a form of Aboriginal art from Australia that uses dots of paint to create patterns and tell stories. The technique involves applying small dots of paint in patterns to form an image.
 
+<video controls width="100%" poster="/images/video_poster.jpg" preload="metadata">
+    <source src="/videos/dotpainting.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> 
+    Sorry, your browser doesn't support embedded videos.
+</video>
+
 ### Key Features
 
 - Uses dots of various colors to create patterns and images

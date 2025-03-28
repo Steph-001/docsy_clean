@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Materials on Teaching Materials Website</title>
-    <link>http://example.org/docs/</link>
+    <link>http://localhost:1313/docs/</link>
     <description>Recent content in Materials on Teaching Materials Website</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://example.org/docs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dot Painting Video</title>
-      <link>http://example.org/docs/dot-painting-video/</link>
+      <link>http://localhost:1313/docs/dot-painting-video/</link>
       <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://example.org/docs/dot-painting-video/</guid>
-      <description>&lt;h1 id=&#34;dot-painting-video&#34;&gt;Dot Painting Video&lt;/h1&gt;&#xA;&lt;p&gt;This page demonstrates embedding a local MP4 video file using a custom shortcode. The video shows dot painting techniques.&lt;/p&gt;&#xA;&lt;h2 id=&#34;video-demonstration&#34;&gt;Video Demonstration&lt;/h2&gt;&#xA;&lt;p&gt;Below is a video demonstration of dot painting:&lt;/p&gt;&#xA;&lt;div class=&#34;video-container&#34;&gt;&#xA;  &lt;video width=&#34;100%&#34; controls&gt;&#xA;    &lt;source src=&#34;http://example.org/videos/dotpainting.mp4&#34; type=&#34;video/mp4&#34;&gt;&#xA;    Your browser does not support the video tag.&#xA;  &lt;/video&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;about-dot-painting&#34;&gt;About Dot Painting&lt;/h2&gt;&#xA;&lt;p&gt;Dot painting is a form of Aboriginal art from Australia that uses dots of paint to create patterns and tell stories. The technique involves applying small dots of paint in patterns to form an image.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/docs/dot-painting-video/</guid>
+      <description>&lt;h1 id=&#34;dot-painting-video&#34;&gt;Dot Painting Video&lt;/h1&gt;&#xA;&lt;p&gt;This page demonstrates embedding a local MP4 video file using a custom shortcode. The video shows dot painting techniques.&lt;/p&gt;&#xA;&lt;h2 id=&#34;video-demonstration&#34;&gt;Video Demonstration&lt;/h2&gt;&#xA;&lt;p&gt;Below is a video demonstration of dot painting:&lt;/p&gt;&#xA;&lt;div class=&#34;video-container&#34;&gt;&#xA;  &lt;video width=&#34;100%&#34; controls&gt;&#xA;    &lt;source src=&#34;http://localhost:1313/videos/dotpainting.mp4&#34; type=&#34;video/mp4&#34;&gt;&#xA;    Your browser does not support the video tag.&#xA;  &lt;/video&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;about-dot-painting&#34;&gt;About Dot Painting&lt;/h2&gt;&#xA;&lt;p&gt;Dot painting is a form of Aboriginal art from Australia that uses dots of paint to create patterns and tell stories. The technique involves applying small dots of paint in patterns to form an image.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tables</title>
-      <link>http://example.org/docs/materials/tables/</link>
+      <link>http://localhost:1313/docs/materials/tables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://example.org/docs/materials/tables/</guid>
+      <guid>http://localhost:1313/docs/materials/tables/</guid>
       <description>&lt;h1 id=&#34;tables-in-teaching-materials&#34;&gt;Tables in Teaching Materials&lt;/h1&gt;&#xA;&lt;p&gt;Tables are an excellent way to organize and present structured information. This page demonstrates how to create and format tables for your teaching materials.&lt;/p&gt;&#xA;&lt;h2 id=&#34;basic-table-structure&#34;&gt;Basic Table Structure&lt;/h2&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a simple table showing the days of the week in different languages:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;English&lt;/th&gt;&#xA;          &lt;th&gt;French&lt;/th&gt;&#xA;          &lt;th&gt;Spanish&lt;/th&gt;&#xA;          &lt;th&gt;German&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Monday&lt;/td&gt;&#xA;          &lt;td&gt;Lundi&lt;/td&gt;&#xA;          &lt;td&gt;Lunes&lt;/td&gt;&#xA;          &lt;td&gt;Montag&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Tuesday&lt;/td&gt;&#xA;          &lt;td&gt;Mardi&lt;/td&gt;&#xA;          &lt;td&gt;Martes&lt;/td&gt;&#xA;          &lt;td&gt;Dienstag&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Wednesday&lt;/td&gt;&#xA;          &lt;td&gt;Mercredi&lt;/td&gt;&#xA;          &lt;td&gt;Miércoles&lt;/td&gt;&#xA;          &lt;td&gt;Mittwoch&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Thursday&lt;/td&gt;&#xA;          &lt;td&gt;Jeudi&lt;/td&gt;&#xA;          &lt;td&gt;Jueves&lt;/td&gt;&#xA;          &lt;td&gt;Donnerstag&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Friday&lt;/td&gt;&#xA;          &lt;td&gt;Vendredi&lt;/td&gt;&#xA;          &lt;td&gt;Viernes&lt;/td&gt;&#xA;          &lt;td&gt;Freitag&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Saturday&lt;/td&gt;&#xA;          &lt;td&gt;Samedi&lt;/td&gt;&#xA;          &lt;td&gt;Sábado&lt;/td&gt;&#xA;          &lt;td&gt;Samstag&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Sunday&lt;/td&gt;&#xA;          &lt;td&gt;Dimanche&lt;/td&gt;&#xA;          &lt;td&gt;Domingo&lt;/td&gt;&#xA;          &lt;td&gt;Sonntag&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;comparison-table&#34;&gt;Comparison Table&lt;/h2&gt;&#xA;&lt;p&gt;Tables are useful for comparing different items or concepts:&lt;/p&gt;</description>
     </item>
   </channel>
