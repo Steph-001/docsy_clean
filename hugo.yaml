@@ -36,3 +36,9 @@ params:
     sidebar_menu_foldable: true
     sidebar_cache_limit: 10
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+

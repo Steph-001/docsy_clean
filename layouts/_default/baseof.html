@@ -8,6 +8,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link href="{{ "css/custom.css" | relURL }}" rel="stylesheet">
   <link href="{{ "css/highlight.css" | relURL }}" rel="stylesheet">
+  <style>
+    /* Additional styles for fixed TOC */
+    .td-toc {
+      position: sticky;
+      top: 70px;
+      height: calc(100vh - 70px) ;
+      overflow-y: auto;
+    }
+    .td-sidebar-nav {
+      padding-top: 70px;
+    }
+    .search-box {
+      max-width: 200px;
+    }
+    @media (max-width: 768px) {
+      .search-box {
+        margin-top: 10px;
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="fixed-top">
@@ -52,6 +73,12 @@
           </li>
           {{ end }}
         </ul>
+        
+        <!-- Search box -->
+        <form class="form-inline my-2 my-lg-0" action="/search/" method="get">
+          <input class="form-control mr-sm-2 search-box" type="search" placeholder="Search" aria-label="Search" name="q">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
     </nav>
     
@@ -157,3 +184,4 @@
   <script src="{{ "js/custom.js" | relURL }}"></script>
 </body>
 </html>
+
