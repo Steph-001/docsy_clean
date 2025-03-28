@@ -12,12 +12,15 @@ This page demonstrates embedding a local MP4 video file using a custom shortcode
 ## Video Demonstration
 
 Below is a video demonstration of dot painting:
+(With markdown placeholder)
 
 {{< local-video src="/videos/dotpainting.mp4" >}}
 
 ## About Dot Painting
 
 Dot painting is a form of Aboriginal art from Australia that uses dots of paint to create patterns and tell stories. The technique involves applying small dots of paint in patterns to form an image.
+
+(html directly in the markdown file)
 
 <video controls width="100%" poster="/images/video_poster.jpg" preload="metadata">
     <source src="/videos/dotpainting.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> 
